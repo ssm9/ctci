@@ -12,7 +12,8 @@ def is_unique(s: str) -> bool:
         bit_vector = bit_vector | (1 << (ord(c) - ord('a')))
     return True
 
+
 if __name__ == '__main__':
-    print(is_unique("aaaaaa"))
-    print(is_unique("abcaef"))
-    print(is_unique("abcdef"))
+    assert is_unique("") is True
+    assert is_unique("abcde") is True
+    assert is_unique("abcda") is False
